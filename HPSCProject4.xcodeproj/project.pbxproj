@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27B7A7C31DDB58A400E8D631 /* composite_int.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27B7A7C21DDB58A400E8D631 /* composite_int.cpp */; };
 		27B7A7C51DDB591C00E8D631 /* test_int.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27B7A7C41DDB591C00E8D631 /* test_int.cpp */; };
 		27B7A7CD1DDB689300E8D631 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27B7A7C61DDB689300E8D631 /* Matrix.cpp */; };
 		27B7A7CE1DDB689300E8D631 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27B7A7CB1DDB689300E8D631 /* Vector.cpp */; };
@@ -36,6 +35,7 @@
 		27B7A7CA1DDB689300E8D631 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Types.h; path = lib/Types.h; sourceTree = "<group>"; };
 		27B7A7CB1DDB689300E8D631 /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector.cpp; path = lib/Vector.cpp; sourceTree = "<group>"; };
 		27B7A7CC1DDB689300E8D631 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = lib/Vector.h; sourceTree = "<group>"; };
+		27B7A7D01DDB73C200E8D631 /* println.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = println.cpp; path = src/println.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +55,7 @@
 				27B7A7CF1DDB689A00E8D631 /* matrix */,
 				27B7A7C21DDB58A400E8D631 /* composite_int.cpp */,
 				27B7A7C41DDB591C00E8D631 /* test_int.cpp */,
+				27B7A7D01DDB73C200E8D631 /* println.cpp */,
 				27B7A7B91DDB586A00E8D631 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -140,7 +141,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				27B7A7CD1DDB689300E8D631 /* Matrix.cpp in Sources */,
-				27B7A7C31DDB58A400E8D631 /* composite_int.cpp in Sources */,
 				27B7A7CE1DDB689300E8D631 /* Vector.cpp in Sources */,
 				27B7A7C51DDB591C00E8D631 /* test_int.cpp in Sources */,
 			);
