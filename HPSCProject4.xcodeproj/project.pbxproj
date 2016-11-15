@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27B7A7BC1DDB586A00E8D631 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27B7A7BB1DDB586A00E8D631 /* main.cpp */; };
+		27B7A7C31DDB58A400E8D631 /* composite_int.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27B7A7C21DDB58A400E8D631 /* composite_int.cpp */; };
+		27B7A7C51DDB591C00E8D631 /* test_int.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27B7A7C41DDB591C00E8D631 /* test_int.cpp */; };
+		27B7A7CD1DDB689300E8D631 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27B7A7C61DDB689300E8D631 /* Matrix.cpp */; };
+		27B7A7CE1DDB689300E8D631 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27B7A7CB1DDB689300E8D631 /* Vector.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		27B7A7B81DDB586A00E8D631 /* HPSCProject4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HPSCProject4; sourceTree = BUILT_PRODUCTS_DIR; };
-		27B7A7BB1DDB586A00E8D631 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		27B7A7B81DDB586A00E8D631 /* proj4_a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = proj4_a; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B7A7C21DDB58A400E8D631 /* composite_int.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = composite_int.cpp; path = src/composite_int.cpp; sourceTree = "<group>"; };
+		27B7A7C41DDB591C00E8D631 /* test_int.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = test_int.cpp; path = src/test_int.cpp; sourceTree = "<group>"; };
+		27B7A7C61DDB689300E8D631 /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Matrix.cpp; path = lib/Matrix.cpp; sourceTree = "<group>"; };
+		27B7A7C71DDB689300E8D631 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Matrix.h; path = lib/Matrix.h; sourceTree = "<group>"; };
+		27B7A7C81DDB689300E8D631 /* NotImplementedException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotImplementedException.h; path = lib/NotImplementedException.h; sourceTree = "<group>"; };
+		27B7A7C91DDB689300E8D631 /* Serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Serializable.h; path = lib/Serializable.h; sourceTree = "<group>"; };
+		27B7A7CA1DDB689300E8D631 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Types.h; path = lib/Types.h; sourceTree = "<group>"; };
+		27B7A7CB1DDB689300E8D631 /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector.cpp; path = lib/Vector.cpp; sourceTree = "<group>"; };
+		27B7A7CC1DDB689300E8D631 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = lib/Vector.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +52,9 @@
 		27B7A7AF1DDB586A00E8D631 = {
 			isa = PBXGroup;
 			children = (
-				27B7A7BA1DDB586A00E8D631 /* HPSCProject4 */,
+				27B7A7CF1DDB689A00E8D631 /* matrix */,
+				27B7A7C21DDB58A400E8D631 /* composite_int.cpp */,
+				27B7A7C41DDB591C00E8D631 /* test_int.cpp */,
 				27B7A7B91DDB586A00E8D631 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +62,31 @@
 		27B7A7B91DDB586A00E8D631 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				27B7A7B81DDB586A00E8D631 /* HPSCProject4 */,
+				27B7A7B81DDB586A00E8D631 /* proj4_a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		27B7A7BA1DDB586A00E8D631 /* HPSCProject4 */ = {
+		27B7A7CF1DDB689A00E8D631 /* matrix */ = {
 			isa = PBXGroup;
 			children = (
-				27B7A7BB1DDB586A00E8D631 /* main.cpp */,
+				27B7A7C61DDB689300E8D631 /* Matrix.cpp */,
+				27B7A7C71DDB689300E8D631 /* Matrix.h */,
+				27B7A7C81DDB689300E8D631 /* NotImplementedException.h */,
+				27B7A7C91DDB689300E8D631 /* Serializable.h */,
+				27B7A7CA1DDB689300E8D631 /* Types.h */,
+				27B7A7CB1DDB689300E8D631 /* Vector.cpp */,
+				27B7A7CC1DDB689300E8D631 /* Vector.h */,
 			);
-			path = HPSCProject4;
+			name = matrix;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		27B7A7B71DDB586A00E8D631 /* HPSCProject4 */ = {
+		27B7A7B71DDB586A00E8D631 /* proj4_a */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27B7A7BF1DDB586A00E8D631 /* Build configuration list for PBXNativeTarget "HPSCProject4" */;
+			buildConfigurationList = 27B7A7BF1DDB586A00E8D631 /* Build configuration list for PBXNativeTarget "proj4_a" */;
 			buildPhases = (
 				27B7A7B41DDB586A00E8D631 /* Sources */,
 				27B7A7B51DDB586A00E8D631 /* Frameworks */,
@@ -77,9 +96,9 @@
 			);
 			dependencies = (
 			);
-			name = HPSCProject4;
+			name = proj4_a;
 			productName = HPSCProject4;
-			productReference = 27B7A7B81DDB586A00E8D631 /* HPSCProject4 */;
+			productReference = 27B7A7B81DDB586A00E8D631 /* proj4_a */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +129,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				27B7A7B71DDB586A00E8D631 /* HPSCProject4 */,
+				27B7A7B71DDB586A00E8D631 /* proj4_a */,
 			);
 		};
 /* End PBXProject section */
@@ -120,7 +139,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B7A7BC1DDB586A00E8D631 /* main.cpp in Sources */,
+				27B7A7CD1DDB689300E8D631 /* Matrix.cpp in Sources */,
+				27B7A7C31DDB58A400E8D631 /* composite_int.cpp in Sources */,
+				27B7A7CE1DDB689300E8D631 /* Vector.cpp in Sources */,
+				27B7A7C51DDB591C00E8D631 /* test_int.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +264,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27B7A7BF1DDB586A00E8D631 /* Build configuration list for PBXNativeTarget "HPSCProject4" */ = {
+		27B7A7BF1DDB586A00E8D631 /* Build configuration list for PBXNativeTarget "proj4_a" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27B7A7C01DDB586A00E8D631 /* Debug */,
