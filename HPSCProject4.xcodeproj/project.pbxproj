@@ -239,6 +239,7 @@
 		27B7A7C01DDB586A00E8D631 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				DEVELOPMENT_TEAM = M8MME6Q9DA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -247,6 +248,7 @@
 		27B7A7C11DDB586A00E8D631 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				DEVELOPMENT_TEAM = M8MME6Q9DA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
