@@ -13,9 +13,7 @@
 #include <iostream>
 #include <exception>
 #include <cmath>
-#include "Vector.h"
 
-using namespace PH;
 using Fcn = std::function<double(double)>;
 
 // Integrate function `f` on the interval `a` to `b`

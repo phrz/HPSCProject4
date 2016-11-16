@@ -21,6 +21,11 @@ using optional = std::experimental::optional<T>;
 
 using namespace std;
 
+string leftPad(string s, size_t size, char pad = ' ') {
+	size_t difference = size - s.size();
+	return string(difference, pad) + s;
+}
+
 string rightPad(string s, size_t size, char pad = ' ') {
 	size_t originalSize = s.size();
 	if(originalSize == size) {
@@ -34,11 +39,18 @@ string rightPad(string s, size_t size, char pad = ' ') {
 	// if shrunken, replace last character with
 	// ellipsis character.
 	if(originalSize > size) {
-		s.pop_back();
-		s.append("…");
+		s.replace(originalSize-1, 1, "…");
 	}
 		
 	return s;
+}
+
+template<typename T>
+string leftPad(T t, size_t size, char pad = ' ') {
+	stringstream stream;
+	stream << t;
+	auto s = stream.str();
+	return leftPad(s, size, pad);
 }
 
 template<typename T>
@@ -80,28 +92,33 @@ int main(int argc, char* argv[]) {
 	vector<double> hvals(n.size());
 	optional<double> convergence;
 	
-	println("┌────────┬────────────┬───────────────┬───────────────┐");
-	println("| n      |   approx   |     error     |  convergence  |");
-	println("├────────┼────────────┼───────────────┼───────────────┤");
+	println("┌────────┬────────────┬─────────────┬───────────────┐");
+	println("|      n |   approx   |    error    |  convergence  |");
+	println("├────────┼────────────┼─────────────┼───────────────┤");
 	
 	for(size_t i = 0; i < n.size(); ++i) {
 		double approximateIntegral = composite_int(f, a, b, n[i]);
 		errors[i] = abs(trueIntegral-approximateIntegral)/abs(trueIntegral);
 		hvals[i] = (b-a)/n[i];
 		
-		string conv = "n/a";
-		if(convergence) {
-			conv = (*convergence);
+		if(i != 0) {
+			convergence = (log(errors[i-1]) - log(errors[i]))
+						/ (log( hvals[i-1]) - log( hvals[i]));
 		}
 		
-		println("│ " + rightPad(n[i],7)
-		  +"│ " + rightPad(approximateIntegral,11)
-		  +"│ " + rightPad(errors[i],14)
+		string conv = "n/a";
+		if(convergence) {
+			conv = to_string(*convergence);
+		}
+		
+		println("│ " + leftPad(n[i],6)
+		  +" │ "+ rightPad(approximateIntegral,11)
+		  +"│ " + rightPad(errors[i],12)
 		  +"│ " + rightPad(conv, 14)
 		  +"│");
 	}
 	
-	println("└────────┴────────────┴───────────────┴───────────────┘");
+	println("└────────┴────────────┴─────────────┴───────────────┘");
 	
 	return 0;
 }
