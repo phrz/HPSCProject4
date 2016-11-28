@@ -70,7 +70,7 @@ int main() {
 		}
 	}
 	
-	println("Total computational cost of this test:", computationalCost);
+	println("Total computational cost of these tests:", computationalCost);
 	
 	return 0;
 }
