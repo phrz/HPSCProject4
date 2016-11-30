@@ -14,9 +14,19 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>proj4_c.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2718B0E41DEF8C31009E7F92</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2729B0F81DDCE5CF00CF2B48</key>
 		<dict>
 			<key>primary</key>
