@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2718B0ED1DEF8C4B009E7F92 /* carbon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2718B0EC1DEF8C4B009E7F92 /* carbon.cpp */; };
-		2718B0EF1DEF8CB5009E7F92 /* test_carbon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2718B0EE1DEF8CB5009E7F92 /* test_carbon.cpp */; };
 		2718B0F01DEF8CD3009E7F92 /* test_carbon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2718B0EE1DEF8CB5009E7F92 /* test_carbon.cpp */; };
+		2718B0F11DEFA16C009E7F92 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27B7A7C61DDB689300E8D631 /* Matrix.cpp */; };
+		2718B0F21DEFA16C009E7F92 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27B7A7CB1DDB689300E8D631 /* Vector.cpp */; };
 		2729B1011DDCEE2D00CF2B48 /* test_adapt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2729B1001DDCEE2D00CF2B48 /* test_adapt.cpp */; };
 		27B7A7C51DDB591C00E8D631 /* test_int.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27B7A7C41DDB591C00E8D631 /* test_int.cpp */; };
 /* End PBXBuildFile section */
@@ -256,6 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2718B0F11DEFA16C009E7F92 /* Matrix.cpp in Sources */,
+				2718B0F21DEFA16C009E7F92 /* Vector.cpp in Sources */,
 				2718B0F01DEF8CD3009E7F92 /* test_carbon.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,8 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2718B0EF1DEF8CB5009E7F92 /* test_carbon.cpp in Sources */,
-				2718B0ED1DEF8C4B009E7F92 /* carbon.cpp in Sources */,
 				27B7A7C51DDB591C00E8D631 /* test_int.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -73,10 +73,6 @@ int adaptive_int(T& f, const double a, const double b, const double rtol,
 	int i = 0;
 	int iMax = 1e6;
 	
-	// value to increment `n` by at the end of each step.
-	// Defined as a function of `i` at each step.
-	int k = 0;
-	
 	// The next integral approximation after `R`, where `R` has `n` subintervals
 	// and `Rnext` has `n+k` subintervals - used to approximate I(f).
 	double Rnext = 0.0;
@@ -96,9 +92,10 @@ int adaptive_int(T& f, const double a, const double b, const double rtol,
 	};
 	
 	while(!underThreshold && i <= iMax) {
-		// (a) Evaluative step: determine if error condition is satisfied.
 		
-		k = int(std::pow(i+1,5)); // heuristic incrementor
+		int nextN = 1.5*n+10;
+		
+		// (a) Evaluative step: determine if error condition is satisfied.
 		
 		// At i=0, calculate Rn and Rn+k. After that, shift Rn := Rn+k,
 		// then calculate just Rn+k, because n := n+k at the iterative step.
@@ -117,8 +114,8 @@ int adaptive_int(T& f, const double a, const double b, const double rtol,
 		}
 		
 		// Calculate Rn+k for all i, and record nº of subintervals to Ntot.
-		Rnext = composite_int(f, a, b, n+k);
-		Ntot += n+k;
+		Rnext = composite_int(f, a, b, nextN);
+		Ntot += nextN;
 		
 		underThreshold = (error(Rnext, R) < bound(Rnext));
 		
@@ -128,9 +125,8 @@ int adaptive_int(T& f, const double a, const double b, const double rtol,
 			return 0;
 		}
 		
-		// (b) Iterative step: increment `i` and `n := n + k`.
-		++i;
-		n += k;
+		// (b) Iterative step: increase `n` by a heuristic amount
+		n = nextN;
 	}
 	
 	return 1;

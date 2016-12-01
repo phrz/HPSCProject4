@@ -53,12 +53,14 @@ double composite_int(T& f, const double a, const double b, const int n) {
 	// a table in the Wikipedia article on Gaussian quadrature.
 	
 	// offset values (given)
-	static const double o[] = {0.11558710999704797, -0.11558710999704797,
-							   0.7415557471458092 , -0.7415557471458092};
-	
+	static const double o[] = { sqrt(3./7. - 2./7.*sqrt(6./5.)),
+							   -sqrt(3./7. - 2./7.*sqrt(6./5.)),
+								sqrt(3./7. + 2./7.*sqrt(6./5.)),
+							   -sqrt(3./7. + 2./7.*sqrt(6./5.))};
+
 	// weights (given)
-	static const double w[] = {0.6521451548625462 , 0.6521451548625462,
-						       0.34785484513745385, 0.34785484513745385};
+	static const double w[] = {(18. + sqrt(30.))/36., (18. + sqrt(30.))/36.,
+							   (18. - sqrt(30.))/36., (18. - sqrt(30.))/36.};
 	
 	// subinterval width equals the interval width,
 	// divided by nº of subintervals `n`.
